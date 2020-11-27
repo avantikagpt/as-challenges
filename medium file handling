@@ -5,16 +5,11 @@ with open("if.txt","r") as whole_file:
    for line in whole_file:
         if "If" in line:
             male_if += 1
-            print (line)
 
 with open("mam.txt","r") as whole_file:
    for line in whole_file:
         if "If" in line:
             fem_if += 1
-            print (line)
-
-print (male_if)
-print (fem_if)
 
 fem_if = str(fem_if)
 male_if = str(male_if)
