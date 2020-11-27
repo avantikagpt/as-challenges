@@ -1,0 +1,39 @@
+male_if = 0
+fem_if = 0
+
+with open("if.txt","r") as whole_file:
+   for line in whole_file:
+        if "If" in line:
+            male_if += 1
+            print (line)
+
+with open("mam.txt","r") as whole_file:
+   for line in whole_file:
+        if "If" in line:
+            fem_if += 1
+            print (line)
+
+print (male_if)
+print (fem_if)
+
+fem_if = str(fem_if)
+male_if = str(male_if)
+
+if fem_if > male_if:
+    with open("if.txt","a") as whole_file:
+        whole_file.write("more if's in mam")
+        whole_file.write(fem_if)
+        whole_file.write(male_if)
+    with open("mam.txt","a") as whole_file:
+        whole_file.write("more if's in mam")
+        whole_file.write(fem_if)
+        whole_file.write(male_if)
+else:
+    with open("if.txt","a") as whole_file:
+        whole_file.write("more if's in male file")
+        whole_file.write(fem_if)
+        whole_file.write(male_if)
+    with open("mam.txt","a") as whole_file:
+        whole_file.write("more ifs in male file")
+        whole_file.write(fem_if)
+        whole_file.write(male_if)
